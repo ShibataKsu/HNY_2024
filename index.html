@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happy New Year Button</title>
+</head>
+
+<body>
+
+    <button onclick="displayMessage()">Click me for a New Year message!</button>
+
+    <p id="newYearMessage" style="display: none;">Happy New Year!</p>
+
+    <script>
+        function displayMessage() {
+            var message = document.getElementById("newYearMessage");
+            message.style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
