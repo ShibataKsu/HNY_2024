@@ -30,33 +30,46 @@
         }
 
         /* テキストカラー */
-        .happy {
-            color: red;
-                  font-size: 48px; /* 文字サイズを大きく */
-      font-weight: bold; /* 太字に設定 */
-            padding: 10px; /* パディングを追加 */
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-            /* 黒い縁取り */
-        }
-
-        .new {
-            color: yellow;
-                  font-size: 48px; /* 文字サイズを大きく */
-      font-weight: bold; /* 太字に設定 */
-            padding: 10px; /* パディングを追加 */
-            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-            /* 黒い縁取り */
-        }
-
+        .happy,
+        .new,
         .year {
-            color: blue;
-                  font-size: 48px; /* 文字サイズを大きく */
-      font-weight: bold; /* 太字に設定 */
-            padding: 10px; /* パディングを追加 */
+            font-size: 48px;
+            /* 文字サイズを大きく */
+            font-weight: bold;
+            /* 太字に設定 */
+            padding: 10px;
+            /* パディングを追加 */
             text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
             /* 黒い縁取り */
+            animation: rainbowAnimation 5s infinite;
+            /* アニメーションを適用 */
         }
 
+        @keyframes rainbowAnimation {
+            0% {
+                color: red;
+            }
+
+            20% {
+                color: orange;
+            }
+
+            40% {
+                color: yellow;
+            }
+
+            60% {
+                color: green;
+            }
+
+            80% {
+                color: blue;
+            }
+
+            100% {
+                color: violet;
+            }
+        }
     </style>
 </head>
 
