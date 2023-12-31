@@ -30,9 +30,7 @@
         }
 
         /* テキストカラー */
-        .happy,
-        .new,
-        .year {
+        .rainbow-text {
             font-size: 48px;
             /* 文字サイズを大きく */
             font-weight: bold;
@@ -41,8 +39,57 @@
             /* パディングを追加 */
             text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
             /* 黒い縁取り */
-            animation: rainbowAnimation 5s infinite;
-            /* アニメーションを適用 */
+            animation: rainbowAnimation 5s infinite linear;
+            /* 全体のアニメーション */
+        }
+
+        /* 各文字のアニメーション遅延 */
+        .rainbow-text:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .rainbow-text:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .rainbow-text:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .rainbow-text:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .rainbow-text:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .rainbow-text:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        .rainbow-text:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+        .rainbow-text:nth-child(8) {
+            animation-delay: 1.4s;
+        }
+
+        .rainbow-text:nth-child(9) {
+            animation-delay: 1.6s;
+        }
+
+        .rainbow-text:nth-child(10) {
+            animation-delay: 1.8s;
+        }
+
+        .rainbow-text:nth-child(11) {
+            animation-delay: 2s;
+        }
+
+        .rainbow-text:nth-child(12) {
+            animation-delay: 2.2s;
         }
 
         @keyframes rainbowAnimation {
@@ -75,18 +122,27 @@
 
 <body>
 
-    <button onclick="hideButton()">
+    <button onclick="showText()">
         Click Here
     </button>
 
     <p id="newYearMessage" style="display: none;">
-        <span class="happy">HAPPY</span>
-        <span class="new">NEW</span>
-        <span class="year">YEAR</span><br>
+        <span class="rainbow-text">H</span>
+        <span class="rainbow-text">A</span>
+        <span class="rainbow-text">P</span>
+        <span class="rainbow-text">P</span>
+        <span class="rainbow-text">Y</span>
+        <span class="rainbow-text">N</span>
+        <span class="rainbow-text">E</span>
+        <span class="rainbow-text">W</span>
+        <span class="rainbow-text">Y</span>
+        <span class="rainbow-text">E</span>
+        <span class="rainbow-text">A</span>
+        <span class="rainbow-text">R</span>
     </p>
 
     <script>
-        function hideButton() {
+        function showText() {
             var button = document.querySelector("button");
             button.style.display = "none";
 
