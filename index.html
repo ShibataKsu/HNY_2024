@@ -3,16 +3,80 @@
 
 <head>
     <title>Happy New Year Button</title>
+    <style>
+        /* 中央揃え */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* ボタンスタイル */
+        button {
+            font-size: 24px;
+            /* テキストサイズを大きく */
+            padding: 20px 40px;
+            /* パディングを追加してボタンを大きく */
+            background-color: #ffffff;
+            /* 背景色 */
+            border: 2px solid #000000;
+            /* ボーダー */
+            border-radius: 8px;
+            /* ボーダーの角丸 */
+            color: black;
+            /* ボタンの文字色を黒に設定 */
+        }
+
+        /* テキストカラー */
+        .happy {
+            color: red;
+                  font-size: 48px; /* 文字サイズを大きく */
+      font-weight: bold; /* 太字に設定 */
+            padding: 10px; /* パディングを追加 */
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            /* 黒い縁取り */
+        }
+
+        .new {
+            color: yellow;
+                  font-size: 48px; /* 文字サイズを大きく */
+      font-weight: bold; /* 太字に設定 */
+            padding: 10px; /* パディングを追加 */
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            /* 黒い縁取り */
+        }
+
+        .year {
+            color: blue;
+                  font-size: 48px; /* 文字サイズを大きく */
+      font-weight: bold; /* 太字に設定 */
+            padding: 10px; /* パディングを追加 */
+            text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+            /* 黒い縁取り */
+        }
+
+    </style>
 </head>
 
 <body>
 
-    <button onclick="displayMessage()">Click me for a New Year message!</button>
+    <button onclick="hideButton()">
+        Click Here
+    </button>
 
-    <p id="newYearMessage" style="display: none;">Happy New Year!</p>
+    <p id="newYearMessage" style="display: none;">
+        <span class="happy">HAPPY</span>
+        <span class="new">NEW</span>
+        <span class="year">YEAR</span><br>
+    </p>
 
     <script>
-        function displayMessage() {
+        function hideButton() {
+            var button = document.querySelector("button");
+            button.style.display = "none";
+
             var message = document.getElementById("newYearMessage");
             message.style.display = "block";
         }
