@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "lib": ["dom", "es6", "esnext"],
+        "outDir": "./js",
+        "rootDir": "./ts", // ソースディレクトリ
+        "strict": true, // 厳格モード
+        "module": "ES6",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "downlevelIteration": true
+    },
+    "include": ["./ts/**/*.ts"], // コンパイル対象のファイル"
+    "exclude": ["js/*"],
+    "devDependencies": {
+        "@types/node": "^20.14.10"
+    }
+}
