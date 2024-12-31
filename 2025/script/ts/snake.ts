@@ -4,10 +4,10 @@ canvas.width = 1000; // キャンバスの横幅
 canvas.height = 600; // キャンバスの高さ
 
 const CELL_SIZE = 15; // グリッドのサイズ
-const SNAKE_SIZE = 30; // ヘビのサイズ
-const NUM_SNAKES = 100; // ヘビの数
+const SNAKE_SIZE = 35; // ヘビのサイズ
+const NUM_SNAKES = 200; // ヘビの数
 const SNAKE_SPEED = 2; // ヘビの移動速度
-const FADE_SPEED = 0.0005; // フェードイン速度
+const FADE_SPEED = 0.00025; // フェードイン速度
 
 let isFirst = true;
 let isSecond = false;
