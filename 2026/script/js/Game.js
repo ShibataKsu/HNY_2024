@@ -1,8 +1,8 @@
-import { Horse } from "./Horse";
-import { Race } from "./Race";
-import { PLAYER_HORSES_CONFIG, CPU_HORSES_CONFIG, TOTAL_HORSES, TRACK_LENGTH } from "./config";
-import { CANVAS_HEIGHT_PER_HORSE } from "./constants";
-import { HARU_URARA_NAME, HARU_WIN_MESSAGE } from "./constants";
+import { Horse } from "./Horse.js";
+import { Race } from "./Race.js";
+import { PLAYER_HORSES_CONFIG, CPU_HORSES_CONFIG, TOTAL_HORSES, TRACK_LENGTH } from "./config.js";
+import { CANVAS_HEIGHT_PER_HORSE } from "./constants.js";
+import { HARU_URARA_NAME, HARU_WIN_MESSAGE } from "./constants.js";
 /**
  * ゲーム全体のロジックとユーザーインタラクションを管理します。
  */
