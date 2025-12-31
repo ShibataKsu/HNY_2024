@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    text-align: center;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 1em;
+}
+
+#selectionArea, #raceArea, #resultsArea {
+    margin: 30px auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 950px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#horseSelection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+#horseSelection label {
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+#horseSelection input[type="radio"] {
+    display: none; /* Hide the actual radio button */
+}
+
+#horseSelection input[type="radio"]:checked + label {
+    border-color: #3498db;
+    background-color: #eaf5fc;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+#raceCanvas {
+    background: linear-gradient(to right, #89c18f, #a1d0a6);
+    border-radius: 8px;
+}
+
+button {
+    background: linear-gradient(45deg, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 50px; /* Make it a pill shape */
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
