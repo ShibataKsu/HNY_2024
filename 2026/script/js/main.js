@@ -1,3 +1,5 @@
 import { Game } from "./Game.js";
-// ゲームを初期化
-new Game();
+// DOMが完全に読み込まれてからゲームを初期化
+document.addEventListener("DOMContentLoaded", () => {
+    new Game();
+});
