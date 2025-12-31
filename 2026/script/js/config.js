@@ -1,27 +1,16 @@
-// --------------------
-// ゲーム全体の定数
-// --------------------
-export const TRACK_LENGTH = 800; // レーストラックの長さ
-export const MAX_SPEED = 2.5; // 馬が到達できる最高速度
-export const ACCELERATION = 0.15; // 応援による加速量
-export const HORSE_ICON = "🐴"; // 馬のアイコン
-// --------------------
-// 馬の個別設定
-// --------------------
-/**
- * プレイヤーが選択可能な馬の設定。
- * 難易度: 韋駄天 (低), 不動 (中), 昇龍 (高)
- */
+export const TRACK_LENGTH = 800;
+export const MAX_SPEED = 2.0;
+export const ACCELERATION = 0.05; // 連打1回あたりの基本加速量
+export const HORSE_ICON = "🐎";
 export const PLAYER_HORSES_CONFIG = [
-    { name: "韋駄天", color: "#e74c3c", type: 'FRONT_RUNNER', baseSpeed: 0.9 },
-    { name: "不動", color: "#3498db", type: 'STEADY', baseSpeed: 0.8 },
-    { name: "昇龍", color: "#f1c40f", type: 'LATE_SPURT', baseSpeed: 0.7 },
+    { name: "ディープインパクト", color: "#FFD700", type: "LATE_SPURT", baseSpeed: 0.6, accelerationPower: 1.0 },
+    { name: "サイレンススズカ", color: "#00FF00", type: "FRONT_RUNNER", baseSpeed: 0.7, accelerationPower: 0.8 },
+    { name: "オグリキャップ", color: "#C0C0C0", type: "STEADY", baseSpeed: 0.65, accelerationPower: 0.9 },
+    // 激ムズ設定: 基本速度が遅く、連打の効果が通常の1/50
+    { name: "ハルウララ", color: "#FF69B4", type: "LATE_SPURT", baseSpeed: 0.3, accelerationPower: 0.1 },
 ];
-/**
- * CPU（対戦相手）の馬の設定。
- */
 export const CPU_HORSES_CONFIG = [
-    { name: "CPU Alpha", color: "#95a5a6", type: 'STEADY', baseSpeed: 0.85 },
-    { name: "CPU Beta", color: "#5D6D7E", type: 'FRONT_RUNNER', baseSpeed: 0.9 },
+    { name: "スペシャルウィーク", color: "#800080", type: "STEADY", baseSpeed: 0.6, accelerationPower: 0.5 },
+    { name: "トウカイテイオー", color: "#0000FF", type: "FRONT_RUNNER", baseSpeed: 0.65, accelerationPower: 0.5 },
 ];
 export const TOTAL_HORSES = PLAYER_HORSES_CONFIG.length + CPU_HORSES_CONFIG.length;
